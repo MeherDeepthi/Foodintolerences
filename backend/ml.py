@@ -37,9 +37,13 @@ coefficients = pd.DataFrame({
 })
 coefficients = coefficients.sort_values(by="Importance", ascending=False)
 
+print("Feature columns used for training:")
+print(X.columns.tolist())
+
 plt.figure(figsize=(10, 6))
 sns.barplot(x="Importance", y="Feature", data=coefficients)
 plt.title("Feature Importance for Symptom Severity")
 plt.tight_layout()
 plt.savefig("feature_importance.png")
 plt.show()
+
