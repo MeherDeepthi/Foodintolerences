@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 
 # Load your saved model
-model_path = os.path.join(os.path.dirname(__file__), "severity_model.pkl")
+model_path = os.path.join(os.path.dirname(__file__), "severity_model.pkl") # change model here if needed
 with open(model_path, "rb") as f:
     model = pickle.load(f)
 
